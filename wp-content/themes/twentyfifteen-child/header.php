@@ -35,23 +35,19 @@
                 </h1>
                 </div>
             <div class="navarea">
-                <ul class="mainnav">
-                    <li><a href="#">GLOBAL<span></span></a></li>
-                    <li class="active"><a href="#">WALL<span></span></a></li>
-                    <li><a href="#">FRIENDS<span></span></a></li>
-                    <li><a href="#">SAVED<span></span></a></li>
-                    <li><a href="#">ACCOUNT<span></span></a></li>
-                </ul>
+               
+                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'mainnav' ,'container' => false,'link_after' => '<span></span>',) ); ?>
                 <ul class="socialnav">
                     <li><a href="#">All Feeds<span></span></a></li>
-                    <li class="active"><a href="#">Facebook<span><img src="assets/images/sfb.png" alt=""/></span></a></li>
-                    <li><a href="#">Twitter<span><img src="assets/images/stw.png" alt=""/></span></a></li>
-                    <li><a href="#">Google+<span><img src="assets/images/sgplus.png" alt=""/></span></a></li>
-                    <li><a href="#">Pinterest<span><img src="assets/images/spin.png" alt=""/></span></a></li>
-                    <li><a href="#">LinkedIn<span><img src="assets/images/sin.png" alt=""/></span></a></li>
-                    <li><a href="#">Multi Select<span><img src="assets/images/smulti.png" alt=""/></span></a></li>
+                    <li class="active"><a href="#">Facebook<span><img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/twentyfifteen-child/img/sfb.png" alt=""/></span></a></li>
+                    <li><a href="#">Twitter<span><img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/twentyfifteen-child/img/stw.png" alt=""/></span></a></li>
+                    <li><a href="#">Google+<span><img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/twentyfifteen-child/img/sgplus.png" alt=""/></span></a></li>
+                    <li><a href="#">Pinterest<span><img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/twentyfifteen-child/img/spin.png" alt=""/></span></a></li>
+                    <li><a href="#">LinkedIn<span><img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/twentyfifteen-child/img/sin.png" alt=""/></span></a></li>
+                    <li><a href="#">Multi Select<span><img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/twentyfifteen-child/img/smulti.png" alt=""/></span></a></li>
                     <li><a href="#">Add<span>+</span></a></li>
                 </ul>
             </div>
         </div>
     </div> <!--header div end-->
+    <div class="smain-container">

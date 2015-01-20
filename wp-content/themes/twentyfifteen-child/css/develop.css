@@ -1,0 +1,2 @@
+.swraper .headerin .navarea ul.mainnav li.current-menu-item a span,
+.swraper .headerin .navarea ul.mainnav li a:hover span{ display:block; width:100%; height:5px; background:#f4ec14; position:relative; top:-41px;}
