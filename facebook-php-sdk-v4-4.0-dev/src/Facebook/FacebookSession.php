@@ -23,7 +23,9 @@
  */
 namespace Facebook;
 
-use Facebook\Entities\AccessToken;
+require_once( '../src/Facebook/Entities/AccessToken.php' );
+
+//use Facebook\Entities\AccessToken;
 use Facebook\Entities\SignedRequest;
 
 /**
