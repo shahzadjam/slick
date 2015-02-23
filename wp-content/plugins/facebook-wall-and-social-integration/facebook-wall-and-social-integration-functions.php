@@ -149,7 +149,7 @@ $msfb_counter=0;
 if(isset($msfbData->error)){ $msfb_html_content_first.= $msfbData->error->message ; $error_flag=true; } else {   
 // check if no record found
 $msfb_max = count($msfbData->data);
-if($msfb_max==0){			
+if($msfb_max==0){
 	$msfb_html_content_first .= '<div class="msfb-wall-box-first">';
 	$msfb_html_content_first .= '<img class="msfb-wall-avatar" src="'. Msfb_Wall_Get_Avatar_Url($msfb_fbid) .'" />';
 	$msfb_html_content_first .= '<div class="msfb-wall-data">';
@@ -157,7 +157,7 @@ if($msfb_max==0){
 	$msfb_html_content_first .= '</div>';
 	$msfb_html_content_first .= '</div>'; $error_flag=true;
 }   
-else 
+else
 {	
 	//get like info per post seperately because of the hassle of first call don't show like count.
 	if(msfb_exists($msfbData->data[0]->id)) { $msfb_source_id = explode("_",$msfbData->data[0]->id);}			   
