@@ -253,13 +253,14 @@
 			    		'name' => $name,
 			    		'permalink' => $permalink,
 			    		'image' => $image,
+						'media_url' => $tweet->entities->media[0]->media_url,
 			    		'time' => $uTime,
 			    		'tweet_id' => $tweet_id
 			    		);
 				endfor;
 				set_transient($transName, $tweets, 60 * $timeto_store);
 				update_option($backupName, $tweets);
-				endif;
+			endif;
 			endif;	
 			if(!function_exists('twitter_time_diff'))
 			{
@@ -291,6 +292,7 @@
 		        				echo ($border_rad_avatar) ? 'circular':'';
 			        			echo '"/>';
 			        		}
+							
 			        		if(!isset($screen_name)){$screen_name = $name;}
 			        	
 			        		if($disp_screen_name!='false')
@@ -304,6 +306,9 @@
 			        	?>
 			       		<div class="tweet_data">
 			        	<?php echo $t['text']; ?>
+                        <span class="screen_name"><img src="<?php echo $t['media_url'];?>" /></span>
+                        
+                        
 			        	</div>
 			            <br/>
 			            <div class="clear"></div>
